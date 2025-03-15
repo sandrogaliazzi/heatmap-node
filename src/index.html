@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Documentação dos Endpoints</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+	font-family: Arial, sans-serif;
+	background-color: #f2f2f2;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 50px;
+	color: #005c99;
+}
+
+table {
+	margin: 50px auto;
+	border-collapse: collapse;
+	background-color: white;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+	padding: 12px 15px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+	background-color: #f5f5f5;
+}
+
+th {
+	background-color: #005c99;
+	color: white;
+}
+
+.endpoint-desc {
+	margin: 20px 50px;
+	padding: 20px;
+	background-color: white;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+}
+
+.endpoint-desc h2 {
+	margin-top: 0;
+	color: #005c99;
+}
+
+.endpoint-desc p {
+	margin-bottom: 10px;
+}
+
+    </style>
+</head>
+<body>
+	<h1>Documentação dos Endpoints</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Método</th>
+				<th>Caminho da URL</th>
+				<th>Descrição</th>
+				<th>Parâmetros</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>POST</td>
+				<td>/ctoclient</td>
+				<td>Cadastra o cliente no banco.</td>
+				<td>Nenhum.</td>
+			</tr>
+			<tr>
+				<td>GET</td>
+				<td>/ctoclient</td>
+				<td>Lista todos os clientes no banco.</td>
+				<td>Nenhum.</td>
+			</tr>
+			<tr>
+				<td>GET</td>
+				<td>/ctoclientlog</td>
+				<td>Lista todos os logs clientes no banco.</td>
+				<td>Nenhum.</td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>/ctoclientid</td>
+				<td>Recebe o cto_id e o nome e retorna o true ou false.</td>
+				<td>
+					<ul>
+						<li><strong>cto_id:</strong> número do cto_id do cliente.</li>
+						<li><strong>name:</strong> nome do cliente.</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>POST</td>
+				<td>/updatectoclient</td>
+				<td>Recebe dados e atualiza no banco.</td>
+				<td>Nenhum.</td>
+			</tr>
+			<tr>
+				<td>DELETE</td>
+				<td>/deletectolog/:id</td>
+				<td>Deleta um log de cliente.</td>
+				<td>
+					<ul>
+						<li><strong>id:</strong> ID do log a ser deletado.</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>DELETE</td>
+				<td>/deletectoclient/:id</td>
+				<td>Deleta um cliente do banco.</td>
+				<td>
+					<ul>
+						<li><strong>id:</strong> ID do cliente a ser deletado.</li>
+					</ul>
+				</td>
+			</tr>
+            <tr>
+                <td>GET</td>
+                <td>/users</td>
+                <td>Lista todos os usuários do banco.</td>
+                <td>Nenhum.</td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td>/users</td>
+                <td>Cadastra um usuário no banco.</td>
+                <td>
+                    <ul>
+                        <li><strong>nome:</strong> nome do usuário.</li>
+                        <li><strong>email:</strong> email do usuário.</li>
+                        <li><strong>senha:</strong> senha do usuário.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>PUT</td>
+                <td>/users/:id</td>
+                <td>Atualiza as informações de um usuário pelo ID.</td>
+                <td>
+                    <ul>
+                        <li><strong>id:</strong> ID do usuário a ser atualizado.</li>
+                        <li><strong>nome:</strong> novo nome do usuário.</li>
+                        <li><strong>email:</strong> novo email do usuário.</li>
+                        <li><strong>senha:</strong> nova senha do usuário.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>DELETE</td>
+                <td>/users/:id</td>
+                <td>Deleta um usuário do banco pelo ID.</td>
+                <td>
+                    <ul>
+                        <li><strong>id:</strong> ID do usuário a ser deletado.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>/users/:id</td>
+                <td>Lista um usuário pelo ID.</td>
+                <td>
+                    <ul>
+                        <li><strong>id:</strong> ID do usuário a ser listado.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td>/login</td>
+                <td>Realiza o login do usuário.</td>
+                <td>
+                    <ul>
+                        <li><strong>email:</strong> email do usuário.</li>
+                        <li><strong>senha:</strong> senha do usuário.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td>/vlan</td>
+                <td>Salva a VLAN no banco.</td>
+                <td>Nenhum.</td>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>/vlan</td>
+                <td>Lista as VLANs no banco.</td>
+                <td>Nenhum.</td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td>/tracking</td>
+                <td>Cadastra o tracking no banco.</td>
+                <td>Nenhum.</td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td>/trackinget</td>
+                <td>Lista o tracking no banco.</td>
+                <td>Nenhum.</td>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>/tomodat</td>
+                <td>Fetch direto do Tomodat (a cada 60 segundos).</td>
+                <td>Nenhum.</td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td>/client</td>
+                <td>Adiciona um cliente no banco, registro de log e Tomodat.</td>
+                <td>Nenhum.</td>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>/logctoclient</td>
+                <td>Lista os logs de clientes cadastrados nas CTOS.</td>
+                <td>Nenhum.</td>
+            </tr>
+            <tr>
+                <td>DELETE</td>
+                <td>/deleteclientfromtomodat/:id</td>
+                <td>Deleta um cliente no servidor do Tomodat.</td>
+                <td>
+                    <ul>
+                        <li><strong>id:</strong> ID do cliente a ser deletado.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td>/instalacoes</td>
+                <td>Salva no banco os dados da instalação.</td>
+                <td>Nenhum.</td>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>/instalacoesget</td>
+                <td>Requisita do banco os dados da instalação.</td>
+                <td>Nenhum.</td>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>/fetch</td>
+                <td>Lista o fetch do banco.</td>
+                <td>Nenhum.</td>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>/fetchwithctoclient</td>
+                <td>Pega o fetch no banco e agrega com as localizações já cadastradas dos clientes.</td>
+                <td>Nenhum.</td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td>/equipamentcadastro</td>
+                <td>Salva no banco os dados do equipamento.</td>
+                <td>Nenhum.</td>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>/equipamentget</td>
+                <td>Lista os dados dos equipamentos.</td>
+                <td>Nenhum.</td>
+            </tr>
+            <tr>
+                <td>PUT</td>
+                <td>/equipamentatualizar</td>
+                <td>Atualiza os dados do equipamento.</td>
+                <td>
+                    <ul>
+                        <li><strong>id:</strong> ID do equipamento a ser atualizado.</li>
+                        <li><strong>name:</strong> novo nome do equipamento.</li>
+                        <li><strong>ip:</strong> novo IP do equipamento.</li>
+                        <li><strong>category:</strong> nova categoria do equipamento.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>DELETE</td>
+                <td>/equipamentdelete</td>
+                <td>Deleta um equipamento.</td>
+                <td>
+                    <ul>
+                        <li><strong>id:</strong> ID do equipamento a ser deletado.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td>/pppoecadastro</td>
+                <td>Salva no banco os dados do PPPoE.</td>
+                <td>Nenhum.</td>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>/pppoeget</td>
+                <td>Requisita do banco os dados do PPPoE.</td>
+                <td>Nenhum.</td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td>/pppoeonline</td>
+                <td>Verifica se o PPPoE está online.</td>
+                <td>Nenhum.</td>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>/getallpppoeonline</td>
+                <td>Verifica quais PPPoEs estão online no concentrador e retorna para o frontend.</td>
+                <td>Nenhum.</td>
+            </tr>
+            
+            
+		</tbody>
+	</table>
+</body>
+
+</html>
